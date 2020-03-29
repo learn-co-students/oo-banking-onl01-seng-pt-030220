@@ -2,15 +2,18 @@ class BankAccount
   attr_accessor :balance, :status
   attr_reader :name
 
-  def initialize(account_name)
-    @name = account_name
+  def initialize(name)
+    @name = name
     @balance = 1000
-    binding.pry
     @status = "open"
   end
 
-  def deposit(money)
-    @balance += money
+  def deposit(amount)
+    @balance += amount
+  end
+
+  def withdraw(amount)
+    @balance -= amount
   end
 
   def display_balance
@@ -18,7 +21,7 @@ class BankAccount
   end
 
   def valid?
-    @status == "open" && @balance > 0 ? true : false
+    !!(@balance > 0 && @status == "open")
   end
 
   def close_account
