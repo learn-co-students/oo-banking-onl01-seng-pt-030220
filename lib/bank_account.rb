@@ -31,4 +31,21 @@ end
 
 # marcos = BankAccount.new("Marcos")
 # vanessa = BankAccount.new("Vanessa")
-# send = Transfer.new(marcos, vanessa, 80)
+
+# puts marcos.display_balance
+# puts vanessa.display_balance
+# puts "========="
+
+# marcos.deposit(2500)
+# vanessa.deposit(1200)
+# puts marcos.display_balance
+# puts vanessa.display_balance
+# puts "========="
+
+# send = Transfer.new(marcos, vanessa, 1500)
+# send.execute_transaction
+# puts marcos.display_balance
+# puts vanessa.display_balance
+
+# marcos.close_account
+# puts marcos.display_balance
